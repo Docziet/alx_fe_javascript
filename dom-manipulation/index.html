@@ -40,6 +40,16 @@
     <p id="syncStatus"></p>
   </div>
 
+  <div id="notification" style="display:none;"></div>
+<div id="quoteDisplay"></div>
+<select id="categoryFilter" onchange="filterQuotes()"></select>
+<div id="addQuoteSection"></div>
+<button id="showQuoteBtn">Show New Quote</button>
+
+<button onclick="exportToJsonFile()">Export</button>
+<input type="file" id="importFile" onchange="importFromJsonFile(event)" />
+
+
   <script src="script.js"></script>
 </body>
 </html>
