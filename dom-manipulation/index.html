@@ -3,20 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Quote Generator</title>
+  <title>Dynamic Quote Generator with Filter</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>✨ Dynamic Quote Generator ✨</h1>
+  <div class="container">
+    <h1>Dynamic Quote Generator</h1>
 
-  <div id="quoteDisplay" class="quote-box">Click the button to show a quote!</div>
-  <button id="newQuote">Show New Quote</button>
+    <!-- Category Filter -->
+    <div class="filter-section">
+      <label for="categoryFilter">Filter by Category:</label>
+      <select id="categoryFilter" onchange="filterQuotes()">
+        <option value="all">All Categories</option>
+      </select>
+    </div>
 
-  <h3>Add a New Quote</h3>
-  <div class="add-section">
-    <input id="newQuoteText" type="text" placeholder="Enter a new quote">
-    <input id="newQuoteCategory" type="text" placeholder="Enter quote category">
-    <button id="addQuoteBtn">Add Quote</button>
+    <!-- Quote Display -->
+    <div id="quoteContainer" class="quote-container"></div>
+
+    <!-- Add New Quote -->
+    <div class="add-section">
+      <h2>Add a New Quote</h2>
+      <input type="text" id="quoteText" placeholder="Enter a quote">
+      <input type="text" id="quoteAuthor" placeholder="Enter the author">
+      <input type="text" id="quoteCategory" placeholder="Enter category">
+      <button onclick="addQuote()">Add Quote</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
